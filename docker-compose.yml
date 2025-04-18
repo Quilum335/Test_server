@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  spigot:
+    image: itzg/minecraft-server:java16    
+    container_name: spigot-server
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "CUSTOM"
+      CUSTOM_SERVER: "server.jar" #spigot file
+    volumes:
+      - ./data:/data
